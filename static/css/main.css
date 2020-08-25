@@ -45,7 +45,7 @@ input[type="file"] {
 }
 
 .ad {
-    background-image: url('bg-image.jpg');
+    background-image: url("bg-image.jpg");
 }
 
 @keyframes spin {
