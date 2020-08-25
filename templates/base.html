@@ -10,13 +10,13 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
 </head>
 
-<body class="ad">
+<body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Covid-Detector</a>
         </div>
     </nav>
-    <div class="container">
+    <div class="container ad">
         <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
     </div>
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
