@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container-fluid">
-    <h3><b><i class="fa fa-dashboard"></i>Statistics</b></h3>
+    <h2><b><i class="text-white"></i>Statistics</b></h2>
     <div class="row">
       <div class="col-md-4">
         <div class="container p-3 my-3 bg-info text-white">
@@ -26,12 +26,12 @@
 
 <hr>
 
-<h2>Do you have the coronavirus?</h2>
+<h2 class="text-white">Do you have covid-19?</h2>
 
 <div>
     <form id="upload-file" method="post" enctype="multipart/form-data">
         <label for="imageUpload" class="upload-label">
-            Upload X-Ray
+            Upload Chest X-Ray
         </label>
         <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
     </form>
