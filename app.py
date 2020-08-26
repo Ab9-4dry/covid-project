@@ -33,15 +33,8 @@ print('Model loaded. Check http://127.0.0.1:5000/')
 def model_predict(img_path, model):
     img = image.load_img(img_path, target_size=(256, 256), color_mode='grayscale')
 
-    # Preprocessing the image
+
     x = image.img_to_array(img).reshape(-1,256,256,1)
-
-    #x = np.true_divide(x, 255)
-    #x = np.expand_dims(x, axis=0)
-
-    # Be careful how your trained model deals with the input
-    # otherwise, it won't make correct prediction!
-    #x = preprocess_input(x, mode='caffe')
 
     preds = model.predict(x)
     print(preds)
@@ -76,14 +69,11 @@ def upload():
         # Make prediction
         preds = model_predict(file_path, model)
 
-        # Process your result for human
-        # pred_class = preds.argmax(axis=-1)            # Simple argmax
-       # pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
         if preds == 1.0:
             result = "Positive"  
         else:
             result = "Negative"   
-                 # Convert to string
+                
         return result
     return None
 
