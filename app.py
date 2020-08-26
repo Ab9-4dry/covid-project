@@ -76,8 +76,6 @@ def upload():
         # Make prediction
         preds = model_predict(file_path, model)
 
-        print(preds)
-
         # Process your result for human
         # pred_class = preds.argmax(axis=-1)            # Simple argmax
        # pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
